@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="styleboi.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="golfproject.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Aguafina+Script' rel='stylesheet' type='text/css'>
+</head>
+<body onload="pageRun()">
+
+<div id="overlaycontainer">
+    <div id="contentdiv">
+        <select id="selectCourse" onChange=" getCourseInfo(this.value)"></select>
+        <select id="selectTeebox" onChange=" setCourseInfo(this.value)"></select>
+        <div>
+            <a href="map.html" style="float: right;"> <b>Map</b></a>
+        </div>
+        <div id="golfbanner">
+            <div class="blackbar">
+                <div class="barleft">
+                    <div id="golflogo" >
+                        <img src="golf.png" style="height: 66px;width: 55px;">
+                    </div>
+                    <div id="logotext">Golf Score Card</div>
+                </div>
+                <div class="barright">
+                    <div id="countdown"></div>
+                </div>
+            </div>
+            <div id="golfcourselabel">Select a Course above</div>
+            <div class="rightwidget">
+
+                <div id="topweather">
+                    <span id="currenttemp">72</span><span class="degsign">&deg;</span>
+                </div>
+                <img id="weatherimage" src="http://openweathermap.org/img/w/03d.png" />
+                <div id="currentconditions">partly cloudy</div>
+
+            </div>
+        </div>
+        <div id="scorecard">
+            <div class="toolbar">
+                <a class="btn btn-primary" href="javascript: addplayer()">+ add player</a>
+            </div>
+            <div id="leftcard"></div>
+            <div id="rightcard"></div>
+
+
+        </div>
+    </div>
+</div>
+
+<div id="container"></div>
+</body>
+</html>
